@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        div {
+            width: 250px;
+            height: 250px;
+            border: 5px dashed #444;
+            border-radius: 125px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .apagar{
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="div1">
+            <button id="btnDiv1">Clique aqui</button>
+        </div>
+
+        <div id="div2">
+            <button id="btnDiv2">Clique aqui</button>
+        </div>
+
+        <div id="div3">
+            <button id="btnDiv3">Clique aqui</button>
+        </div>
+
+        <div id="div4">
+            <button id="btnDiv4">Não Clique aqui</button>
+        </div>
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        //JavaScript
+        /*
+        const div1 = document.getElementsByTagName("div")[0]
+        const btn1 = document.getElementById("btnDiv1")
+        
+        btn1.addEventListener("click", colorirDiv1)
+        function colorirDiv1() {
+            div1.style.backgroundColor = "lightcoral"
+        }
+        */
+
+        //JQuery
+        $('#btnDiv1').click(()=>{$('#div1').css('background-color','lightcoral')}).dblclick(()=>{$('#div1').css('background-color','white')})
+        $('#btnDiv2').click(()=>{$('#div2').css('background-color','lightblue')}).dblclick(()=>{$('#div2').css('background-color','white')})
+        $('#btnDiv3').click(()=>{$('#div3').css('background-color','lightgreen')}).dblclick(()=>{$('#div3').css('background-color','white')})
+        $('#btnDiv4').click(() => {$('#div4').attr('class', 'apagar')})
+    </script>
+</body>
+
+</html>

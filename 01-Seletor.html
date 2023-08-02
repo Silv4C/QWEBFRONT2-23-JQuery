@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor JQuery</title>
+</head>
+<body>
+    <h1>Seletor JQuery</h1>
+    <p id="descricao">Trabalhando com seletores no JQuery</p>
+    <p class="lema">Escreva menos e faça mais!</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        /*JavaScript
+        const tituloPrincipal = document.getElementsByTagName("h1")[0]
+        tituloPrincipal.innerHTML = "Olá Mundo!"
+        tituloPrincipal.style.color = "red"
+        */
+        //JQuery
+        $('h1').html('Olá Mundo').css('color', 'red').css('background-color', 'yellow')
+        $('#descricao').html('Eu S2 o JQuery').css('background-color','cyan')
+        $('.lema').css('text-decoration','underline').css('background-color', 'lightblue').css('color','palevioletred')
+    </script>
+</body>
+</html>
