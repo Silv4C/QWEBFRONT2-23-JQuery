@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <input type="number" id="numero1" placeholder="Informe o 1º número">
+            <input type="number" id="numero2" placeholder="Informe o 2º número">
+            <span id="btnSomar">Calcule a soma</span>
+            <span id="btnCalcularMedia">Calcule a média</span>
+            <div id="resultado">Resultado: </div>
+        </form>
+    </main>
+    <!-- CDN do JQuery via Google APIs -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+
+    <script>
+        $('#btnSomar').click(() => {
+
+            let n1 = Number.parseFloat($('#numero1').val())
+            let n2 = Number.parseFloat($('#numero2').val())
+            let soma = n1 + n2
+            $('#resultado').html(`Resultado: ${soma}`)
+
+        })
+
+        $('#btnCalcularMedia').click(() => {
+            let n1 = Number.parseFloat($('#numero1').val())
+            let n2 = Number.parseFloat($('#numero2').val())
+            let media = (n1 + n2) / 2
+            $('#resultado').html(`Resultado: ${media}`)
+        })
+
+
+        setTimeout(() => window.close(), 1000)
+    </script>
+</body>
+
+</html>
