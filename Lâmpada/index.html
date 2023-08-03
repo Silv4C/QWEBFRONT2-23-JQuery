@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Lâmpada</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <img id="imgLampada" src="imagens/lampada-off.png" alt="Lâmpada Desligada">
+    <div>
+        <button id="btnAcender">Acender</button>
+        <button id="btnApagar">Apagar</button>
+        <button id="btnTrocar">Trocar Lâmpada</button>
+    </div>
+
+    <!-- CDN jQuery 3.7 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+        $('#btnAcender').click(()=> {$('#imgLampada').attr('src','imagens/lampada-on.png')})
+        $('#btnApagar, #btnTrocar').click(()=> {$('#imgLampada').attr("src", "imagens/lampada-off.png")})
+
+        $('#imgLampada').dblclick(() => {$('#imgLampada').attr('src','imagens/lampada-quebrada.png')})
+        
+    </script>
+</body>
+
+</html>
